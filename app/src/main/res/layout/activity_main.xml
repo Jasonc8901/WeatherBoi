@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/bg"
+    tools:context="com.example.jasonc.weatherboi.MainActivity"
+    android:background = "@drawable/partlycloudgradient">
+
+    <ImageView
+        android:id="@+id/dogImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        android:layout_alignEnd="@+id/tempFormatView"
+        android:layout_alignRight="@+id/tempFormatView"
+        android:layout_below="@+id/parkFinder"
+        app:srcCompat="@drawable/defaultdog" />
+
+    <TextView
+        android:id="@+id/currentT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/parkFinder"
+        android:layout_alignRight="@+id/parkFinder"
+        android:layout_below="@+id/dogImg"
+        android:text="70"
+        android:textColor="@android:color/black"
+        android:textSize="36sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/currentT"
+        android:layout_toEndOf="@+id/currentT"
+        android:layout_toRightOf="@+id/currentT"
+        android:text="o"
+        android:textColor="@android:color/black"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tempFormatView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView3"
+        android:layout_toEndOf="@+id/textView3"
+        android:layout_toRightOf="@+id/textView3"
+        android:text="F"
+        android:textColor="@android:color/black"
+        android:textSize="36sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/weatherstatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/statusImg"
+        android:layout_toEndOf="@+id/dogImg"
+        android:layout_toRightOf="@+id/dogImg"
+        android:text="weatherStatus"
+        android:textColor="@android:color/black" />
+
+    <ImageView
+        android:id="@+id/statusImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/parkFinder"
+        android:layout_marginTop="12dp"
+        android:layout_toEndOf="@+id/dogImg"
+        android:layout_toRightOf="@+id/dogImg"
+        app:srcCompat="@drawable/partlycloud" />
+
+    <TextView
+        android:id="@+id/alert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView14"
+        android:layout_centerHorizontal="true"
+        android:text=" "
+        android:textColor="@android:color/holo_red_dark"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/weatherstatus"
+        android:layout_toEndOf="@+id/dogImg"
+        android:layout_toRightOf="@+id/dogImg"
+        android:text="Pressure:"
+        android:textColor="@android:color/background_dark" />
+
+    <TextView
+        android:id="@+id/pressureView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignBaseline="@+id/textView7"
+        android:layout_alignBottom="@+id/textView7"
+        android:layout_toEndOf="@+id/textView7"
+        android:layout_toRightOf="@+id/textView7"
+        android:text="0mmhg"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/windDir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignEnd="@+id/statusImg"
+        android:layout_alignRight="@+id/statusImg"
+        android:layout_below="@+id/weatherstatus"
+        android:textColor="@android:color/black" />
+
+    <Button
+        android:id="@+id/temptype"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignBaseline="@+id/tempFormatView"
+        android:layout_alignBottom="@+id/tempFormatView"
+        android:layout_alignEnd="@+id/windDir"
+        android:layout_alignRight="@+id/windDir"
+        android:background="@android:color/black"
+        android:text="C" />
+
+    <Button
+        android:id="@+id/locationBtn"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/black"
+        android:paddingLeft="60px"
+        android:paddingRight="60px"
+        android:text=" change location " />
+
+    <Button
+        android:id="@+id/parkFinder"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/black"
+        android:paddingLeft="60px"
+        android:paddingRight="60px"
+        android:text="Find a park near me"
+        android:onClick="sendMessage"
+        />
+
+    <TextView
+        android:id="@+id/Pressure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/textView7"
+        android:layout_toEndOf="@+id/dogImg"
+        android:layout_toRightOf="@+id/dogImg"
+        android:text="Humidity:"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/humidView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pressureView"
+        android:layout_toEndOf="@+id/textView7"
+        android:layout_toRightOf="@+id/textView7"
+        android:text="0%"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/locationView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/alert"
+        android:text="Corpus Christi, TX weather"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/textView18"
+        android:layout_toLeftOf="@+id/textView"
+        android:layout_toStartOf="@+id/textView"
+        android:text="Updated on: "
+        android:textColor="@android:color/black"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/upDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView14"
+        android:layout_alignBottom="@+id/textView14"
+        android:layout_toEndOf="@+id/textView14"
+        android:layout_toRightOf="@+id/textView14"
+        android:textColor="@android:color/black"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/currentT"
+        android:layout_alignStart="@+id/currentT"
+        android:layout_below="@+id/currentT"
+        android:text=" "
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/tempHI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView16"
+        android:layout_toEndOf="@+id/textView16"
+        android:layout_toRightOf="@+id/textView16"
+        android:text=""
+        android:textColor="@android:color/black"
+        tools:text=" " />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView16"
+        android:layout_alignStart="@+id/textView16"
+        android:layout_below="@+id/textView16"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/tempLOW"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView14"
+        android:layout_alignEnd="@+id/textView14"
+        android:layout_alignRight="@+id/textView14"
+        android:text=" "
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/locationView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="56dp"
+        android:text="WeatherBoi"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

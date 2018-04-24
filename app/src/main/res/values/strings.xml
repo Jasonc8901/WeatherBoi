@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">WeatherBoi</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="google_android_map_api_key">AIzaSyA1eE1kidsRd6bb8bDa4vC0bFXk5JXg7Xg</string>
+</resources>
