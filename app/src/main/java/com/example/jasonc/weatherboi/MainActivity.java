@@ -264,6 +264,16 @@ public class MainActivity extends AppCompatActivity {
                         boii.setImageResource(R.drawable.cloudydog);
                         statusView.setText("HAZE");
                         break;
+                    default:
+                        statusImg.setImageResource(R.drawable.sunny);
+                        statusView.setText("CLEAR");
+                        if(tempValF < 60)
+                            boii.setImageResource(R.drawable.colddog);
+                        else
+                            boii.setImageResource(R.drawable.sundog);
+
+                        bg.setBackgroundResource(R.drawable.sunnygradient);
+                        break;
                 }
                 //updates temperature to current location
 
